@@ -40,6 +40,17 @@ button:active {
   height: 40px;
 }
 
+#running.slide {
+  height: 0px;
+  opacity: 0;
+  transition: 1s;
+}
+
+#running.slide.upp {
+  height: 40px;
+  opacity: 1;
+}
+
 #seconds {
   font-size: 80px;
   font-family: monospace;

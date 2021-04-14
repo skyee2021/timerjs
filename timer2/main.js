@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let timer, cnt = 0;
   document.querySelector('button').addEventListener('click', function(){
     
-    if(timer && document.querySelector('#running').style.display === 'block'){
+    if(timer){
       clearInterval(timer)
       timer = null;
 
       document.querySelector('button').textContent = 'Start';
-      document.querySelector('#running').style.display = 'none';
+      document.querySelector('#running').classList.remove('upp')
       
     }else{
       timer =setInterval(function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.dots').prepend(document.querySelector('.dots > div:last-child'))
 
         ///////
-        document.querySelector('#running').style.display = 'block';
+        document.querySelector('#running').classList.add('upp')
         document.querySelector('button').textContent = 'Stop';
       }, 100)
     }
